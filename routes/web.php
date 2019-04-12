@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::view('/', 'landing');
+Route::match(['get', 'post'], '/dashboard', function(){
+    return view('dashboard');
 });
+Route::view('/examples/plugin', 'examples.plugin');
+Route::view('/examples/blank', 'examples.blank');
