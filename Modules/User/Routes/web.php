@@ -11,9 +11,6 @@
 |
 */
 
-Route::view('/', 'landing');
-Route::match(['get', 'post'], '/dashboard', function () {
-    return view('dashboard');
+Route::prefix('user')->group(function () {
+    Route::get('/', 'UserController@index');
 });
-Route::view('/examples/plugin', 'examples.plugin');
-Route::view('/examples/blank', 'examples.blank');

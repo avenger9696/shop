@@ -19,7 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('time_zone')->nullable()->default('Asia/Ho_Chi_Minh');
+            $table->string('date_format')->nullable()->default('d-m-Y');
+            $table->string('time_format')->nullable()->default('H:i:s');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

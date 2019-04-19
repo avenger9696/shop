@@ -1,0 +1,32 @@
+{
+    "name": "shopping/user",
+    "description": "",
+    "authors": [
+        {
+            "name": "Pham Thao",
+            "email": "phamthao03596@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\User\\Providers\\UserServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "require": {
+        "php": ">=7.1.3",
+        "spatie/laravel-permission": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\User\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -26,16 +26,14 @@ return [
         'enabled' => false,
         'path' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
         'files' => [
-            'start' => 'start.php',
-            'routes' => 'Http/routes.php',
+            'routes/web' => 'Routes/web.php',
             'views/index' => 'Resources/views/index.blade.php',
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
             'composer' => 'composer.json',
         ],
         'replacements' => [
-            'start' => ['LOWER_NAME', 'ROUTES_LOCATION'],
-            'routes' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
+            'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
             'views/index' => ['LOWER_NAME'],
             'views/master' => ['STUDLY_NAME'],
